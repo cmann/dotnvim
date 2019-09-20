@@ -37,7 +37,7 @@ colorscheme nord
 " general
 let mapleader="\<space>"
 set grepprg=rg
-set scrolloff=1
+set scrolloff=5
 set relativenumber
 set number
 set lazyredraw
