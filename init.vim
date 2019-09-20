@@ -142,6 +142,11 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 
+highlight CocErrorSign guifg=#BF616A
+highlight CocWarningSign guifg=#EBCB8B
+highlight CocErrorHighlight guisp=#BF616A gui=undercurl
+highlight CocWarningHighlight guisp=#EBCB8B gui=undercurl
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
