@@ -96,7 +96,7 @@ let g:terminal_color_14='#8abeb7'
 let g:terminal_color_15='#ecebec'
 
 " disable line numbers
-autocmd TermOpen * setlocal nonumber norelativenumber
+autocmd TermOpen * setlocal nonumber norelativenumber scrolloff=0
 
 " use escape to return to normal mode
 tnoremap <Esc> <C-\><C-n>
