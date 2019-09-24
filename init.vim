@@ -31,7 +31,11 @@ let g:nord_bold=1
 let g:nord_italic=1
 let g:nord_underline=1
 let g:nord_italic_comments=1
-au ColorScheme nord highlight Folded cterm=italic,bold ctermbg=0 ctermfg=10 guibg=#3B4252 guifg=#5E81AC
+augroup Colors
+    autocmd!
+    autocmd ColorScheme nord highlight Folded cterm=italic,bold ctermbg=0 ctermfg=10 guibg=#3B4252 guifg=#5E81AC
+augroup END
+
 colorscheme nord
 
 " general
@@ -63,17 +67,19 @@ match TrailingWhitespace / \+$/
 " }}}
 
 " Window splitting {{{
-" resize splits when window is resized
-au VimResized * :wincmd =
 
 " split correctly
 set splitright splitbelow
 
-" cursorline only in active window
-augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
+augroup Splits
+    autocmd!
+
+    " resize splits when window is resized
+    autocmd VimResized * :wincmd =
+
+    " cursorline only in active window
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
 augroup END
 " }}}
 
@@ -95,8 +101,12 @@ let g:terminal_color_13='#b294bb'
 let g:terminal_color_14='#8abeb7'
 let g:terminal_color_15='#ecebec'
 
-" disable line numbers
-autocmd TermOpen * setlocal nonumber norelativenumber scrolloff=0
+augroup Terminal
+    autocmd!
+
+    " disable line numbers
+    autocmd TermOpen * setlocal nonumber norelativenumber scrolloff=0
+augroup END
 
 " use escape to return to normal mode
 tnoremap <Esc> <C-\><C-n>
