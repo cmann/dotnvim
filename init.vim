@@ -65,6 +65,39 @@ highlight TrailingWhitespace guibg=#cc6666 ctermbg=darkred
 match TrailingWhitespace / \+$/
 " }}}
 
+" Keybindings {{{
+" rebind j and k only when a count is not supplied
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> gj (v:count == 0 ? 'j' : 'gj')
+nnoremap <expr> gk (v:count == 0 ? 'k' : 'gk')
+
+" keep search matches in the middle of the screen
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" clear highlighting and redraw
+nnoremap <silent> <leader>l :nohl<CR><C-l>
+
+" split navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" fast search/replace
+nnoremap <leader>r :'{,'}s/\<<C-r>=expand('<cword>')<CR>\>/
+nnoremap <leader>R :%s/\<<C-r>=expand('<cword>')<CR>\>/
+xnoremap <leader>r :<C-u>'{,'}s/<C-r>=functions#GetVisualSelection()<CR>/
+xnoremap <leader>R :<C-u>%s/<C-r>=functions#GetVisualSelection()<CR>/
+
+" make Y behave like D and C
+nnoremap Y y$
+
+" linewise reselection after paste
+nnoremap <leader>V V`]
+" }}}
+
 " Window splitting {{{
 
 " split correctly
@@ -111,39 +144,6 @@ augroup END
 tnoremap <Esc> <C-\><C-n>
 " }}}
 
-" Keybindings {{{
-" rebind j and k only when a count is not supplied
-nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
-nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
-nnoremap <expr> gj (v:count == 0 ? 'j' : 'gj')
-nnoremap <expr> gk (v:count == 0 ? 'k' : 'gk')
-
-" keep search matches in the middle of the screen
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-" clear highlighting and redraw
-nnoremap <silent> <leader>l :nohl<CR><C-l>
-
-" split navigation
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-" fast search/replace
-nnoremap <leader>r :'{,'}s/\<<C-r>=expand('<cword>')<CR>\>/
-nnoremap <leader>R :%s/\<<C-r>=expand('<cword>')<CR>\>/
-xnoremap <leader>r :<C-u>'{,'}s/<C-r>=functions#GetVisualSelection()<CR>/
-xnoremap <leader>R :<C-u>%s/<C-r>=functions#GetVisualSelection()<CR>/
-
-" make Y behave like D and C
-nnoremap Y y$
-
-" linewise reselection after paste
-nnoremap <leader>V V`]
-" }}}
-
 " CoC.nvim {{{
 set updatetime=300
 set shortmess+=c
@@ -172,7 +172,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-let g:coc_global_extensions=["coc-json", "coc-eslint", "coc-tsserver"]
+let g:coc_global_extensions=["coc-json", "coc-eslint", "coc-tsserver", "coc-python"]
 " }}}
 
 " FZF {{{
