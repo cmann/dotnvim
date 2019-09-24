@@ -58,7 +58,7 @@ set gdefault
 
 " wildmenu
 set wildignorecase fileignorecase
-set wildignore+=*.pyc,*.o,*~,**/.git/**,**/tmp/**,**/node_modules/**,**/_build/**,**/deps/**,**/target/**,**/uploads/**
+set wildignore+=*.pyc,*.o,*~,**/.git/**,**/tmp/**,**/node_modules/**,**/_build/**,**/deps/**,**/target/**,**/uploads/**,**/build/**,**/built/**
 
 " highlight trailing whitespace
 highlight TrailingWhitespace guibg=#cc6666 ctermbg=darkred
