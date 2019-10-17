@@ -108,7 +108,7 @@ nnoremap Y y$
 nnoremap <leader>V V`]
 
 " open terminal in new tab
-nnoremap <leader>s :tabnew \| :terminal<CR>
+nnoremap <leader>s :tabnew \| :terminal<CR>i
 " }}}
 
 " Window splitting {{{
