@@ -33,6 +33,15 @@ let g:nord_italic_comments=1
 augroup Colors
     autocmd!
     autocmd ColorScheme nord highlight Folded cterm=italic,bold ctermbg=0 ctermfg=10 guibg=#3B4252 guifg=#5E81AC
+
+    autocmd ColorScheme nord highlight CocErrorSign guifg=#BF616A
+    autocmd ColorScheme nord highlight CocWarningSign guifg=#EBCB8B
+    autocmd ColorScheme nord highlight CocErrorHighlight guisp=#BF616A gui=undercurl
+    autocmd ColorScheme nord highlight CocWarningHighlight guisp=#EBCB8B gui=undercurl
+
+    autocmd ColorScheme nord highlight fzf1 guifg=#ECEFF4 guibg=#4C566A
+    autocmd ColorScheme nord highlight fzf2 guifg=#ECEFF4 guibg=#4C566A
+    autocmd ColorScheme nord highlight fzf3 guifg=#ECEFF4 guibg=#4C566A
 augroup END
 
 colorscheme nord
@@ -152,11 +161,6 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 
-highlight CocErrorSign guifg=#BF616A
-highlight CocWarningSign guifg=#EBCB8B
-highlight CocErrorHighlight guisp=#BF616A gui=undercurl
-highlight CocWarningHighlight guisp=#EBCB8B gui=undercurl
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -184,10 +188,6 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :BTags<CR>
 nnoremap <leader>T :Tags<CR>
 nnoremap <leader>g :Rg<space>
-
-hi fzf1 guifg=#ECEFF4 guibg=#4C566A
-hi fzf2 guifg=#ECEFF4 guibg=#4C566A
-hi fzf3 guifg=#ECEFF4 guibg=#4C566A
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
