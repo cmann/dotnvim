@@ -12,6 +12,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -154,6 +155,12 @@ augroup END
 
 " use escape to return to normal mode
 tnoremap <Esc> <C-\><C-n>
+" }}}
+
+" {{{ vim-qf
+nmap <leader>q <Plug>(qf_qf_toggle)
+nmap [q <Plug>(qf_qf_previous)
+nmap ]q <Plug>(qf_qf_next)
 " }}}
 
 " CoC.nvim {{{
