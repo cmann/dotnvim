@@ -96,6 +96,9 @@ nnoremap Y y$
 
 " linewise reselection after paste
 nnoremap <leader>V V`]
+
+" open terminal in new tab
+nnoremap <leader>s :tabnew \| :terminal<CR>
 " }}}
 
 " Window splitting {{{
