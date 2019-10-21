@@ -49,6 +49,7 @@ colorscheme nord
 
 " general
 let mapleader="\<space>"
+set updatetime=300
 set grepprg=rg\ --vimgrep
 set scrolloff=5
 set relativenumber
@@ -164,7 +165,6 @@ nmap ]q <Plug>(qf_qf_next)
 " }}}
 
 " CoC.nvim {{{
-set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 
