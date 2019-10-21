@@ -52,8 +52,6 @@ let mapleader="\<space>"
 set updatetime=300
 set grepprg=rg\ --vimgrep
 set scrolloff=5
-set relativenumber
-set number
 set lazyredraw
 set hidden
 
