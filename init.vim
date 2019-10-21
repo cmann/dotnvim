@@ -5,7 +5,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'alvan/vim-closetag'
 Plug 'arcticicestudio/nord-vim'
-" Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
