@@ -66,6 +66,7 @@ set smartcase
 set gdefault
 
 " wildmenu
+set wildmode=longest:full,full
 set wildignorecase fileignorecase
 set wildignore+=*.pyc,*.o,*~,**/.git/**,**/tmp/**,**/node_modules/**,**/_build/**,**/deps/**,**/target/**,**/uploads/**,**/build/**,**/built/**
 
