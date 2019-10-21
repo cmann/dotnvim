@@ -7,13 +7,13 @@ Plug 'alvan/vim-closetag'
 Plug 'arcticicestudio/nord-vim'
 " Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
+Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -226,9 +226,10 @@ let g:fzf_action = {
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 " }}}
 
-" Auto-pairs {{{
-let g:AutoPairsCenterLine=0
-let g:AutoPairsMultilineClose=0
+" pear-tree {{{
+let g:pear_tree_smart_openers = 1
+let g:pear_tree_smart_closers = 1
+let g:pear_tree_smart_backspace = 1
 " }}}
 
 " Lightline {{{
