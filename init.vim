@@ -54,6 +54,7 @@ set grepprg=rg\ --vimgrep
 set scrolloff=5
 set lazyredraw
 set hidden
+set autoread
 
 " indentation
 set shiftwidth=4
