@@ -110,6 +110,14 @@ nnoremap <leader>V V`]
 
 " open terminal in new tab
 nnoremap <leader>s :tabnew \| :terminal<CR>i
+
+" tab navigation
+nnoremap <c-Left> gT
+nnoremap <c-Right> gt
+inoremap <c-Left> <Esc>gTi
+inoremap <c-Right> <Esc>gti
+tnoremap <c-Left> <C-\><C-n>gTi
+tnoremap <c-Right> <C-\><C-n>gti
 " }}}
 
 " Window splitting {{{
