@@ -3,7 +3,6 @@
 " Plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'alvan/vim-closetag'
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -13,6 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
 Plug 'tmsvg/pear-tree'
+Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
