@@ -10,6 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'romainl/vim-qf'
+Plug 'romainl/vim-qlist'
 Plug 'sheerun/vim-polyglot'
 Plug 'tmsvg/pear-tree'
 Plug 'tommcdo/vim-lion'
