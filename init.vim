@@ -28,10 +28,12 @@ call plug#end()
 " Settings {{{
 " colors
 set termguicolors
+
 let g:nord_bold=1
 let g:nord_italic=1
 let g:nord_underline=1
 let g:nord_italic_comments=1
+
 augroup Colors
     autocmd!
     autocmd ColorScheme nord highlight Folded cterm=italic,bold ctermbg=0 ctermfg=10 guibg=#3B4252 guifg=#5E81AC
