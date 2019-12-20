@@ -111,9 +111,6 @@ nnoremap Y y$
 " linewise reselection after paste
 nnoremap <leader>V V`]
 
-" open terminal in new tab
-nnoremap <leader>s :tabnew \| :terminal<CR>i
-
 " tab navigation
 nnoremap <c-Left> gT
 nnoremap <c-Right> gt
@@ -138,35 +135,6 @@ augroup Splits
     autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
 augroup END
-" }}}
-
-" Terminal {{{
-let g:terminal_color_0='#1d1f21'
-let g:terminal_color_1='#cc6666'
-let g:terminal_color_2='#b5bd68'
-let g:terminal_color_3='#f0c674'
-let g:terminal_color_4='#81a2be'
-let g:terminal_color_5='#b294bb'
-let g:terminal_color_6='#8abeb7'
-let g:terminal_color_7='#ecebec'
-let g:terminal_color_8='#1d1f21'
-let g:terminal_color_9='#cc6666'
-let g:terminal_color_10='#b5bd68'
-let g:terminal_color_11='#f0c674'
-let g:terminal_color_12='#81a2be'
-let g:terminal_color_13='#b294bb'
-let g:terminal_color_14='#8abeb7'
-let g:terminal_color_15='#ecebec'
-
-augroup Terminal
-    autocmd!
-
-    " disable line numbers
-    autocmd TermOpen * setlocal nonumber norelativenumber scrolloff=0
-augroup END
-
-" use escape to return to normal mode
-tnoremap <Esc> <C-\><C-n>
 " }}}
 
 " {{{ vim-qf
