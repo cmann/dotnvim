@@ -5,7 +5,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
